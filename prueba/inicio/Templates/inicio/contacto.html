@@ -1,20 +1,26 @@
 {% extends "inicio/encabezado.html" %}
 
+{% block titulo %} CONTACTO {% endblock %}
+
+{% block imagen%}
+
+{% load static%}
+{% static 'inicio/images/contactos.png' %}
+
+{% endblock%}
+
+{% block sub  %} CONTACTO {% endblock %}
+
+{% block h3%}Contacto{% endblock%}
+{% block small%}Ingresa tus datos{% endblock%}
+
 {% block contenido %}
-		<!-- Contenido Principal-->
-        <div class="page-content">
+	
 
 
 			<!--Encabezdo -->
-			<div class="page-header">
-				<div class="page-title">
-					<h3>Contactanos
-				    <small>Ingresa tus datos</small></h3>
-				</div>
-
-				
-				
-			</div>
+			
+			
 			<!-- /Encabezado-->
 
 			<!-- Formulario -->
@@ -45,6 +51,4 @@
 				</div>
 			</form>
 		<!-- Fin del Formulario -->
-		</div>
-		<!-- /Contenido Principal-->
     {% endblock %}

@@ -2,26 +2,19 @@
 
 {% block titulo %} PRINCIPAL {% endblock %}
 
-{% block contenido %}
-		<!-- Contenido Principal-->
-        <div class="page-content">
+{% block imagen%}
 
+{% load static%}
+{% static 'inicio/images/home.png' %}
 
-			<!--Encabezdo -->
-			<div class="page-header">
-				<div class="page-title">
-					<h3>Alumnos
-				    <small>Lista de Alumnos </small></h3>
-				</div>
+{% endblock%}
 
-				
-			</div>
-			<!-- /Encabezado-->
+{% block sub  %} PRINCIPAL {% endblock %}
 
+{% block h3%}Principal{% endblock%}
+{% block small%}Lista de alumnos{% endblock%}
 
-		</div>
-		<!-- /Contenido Principal-->
-	</div>
+{% block contenido %}	
+			
 {% endblock %}
-
 

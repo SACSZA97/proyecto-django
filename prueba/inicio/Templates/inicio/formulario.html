@@ -1,24 +1,20 @@
 {% extends "inicio/encabezado.html" %}
 
+{% block titulo %} FORMULARIO {% endblock %}
+
+
+{% block imagen %}
+
+{% load static%}
+{% static 'inicio/images/registrar.png' %}
+
+{% endblock%}
+{% block sub  %} FORMULARIO {% endblock %}
+
+{% block h3%}Registro{% endblock%}
+{% block small%}Ingresa tu informacion{% endblock%}
+
 {% block contenido %}
-
-
-		<!-- Contenido Principal-->
-        <div class="page-content">
-
-
-			<!--Encabezdo -->
-			<div class="page-header">
-				<div class="page-title">
-					<h3>Registro
-				    <small>Ingresa tu información</small></h3>
-				</div>
-
-				
-				
-			</div>
-			<!-- /Encabezado-->
-
 			<!-- Formulario -->
 			<form class="form-horizontal" action="#" role="form">
 	            <div class="panel panel-default">
@@ -64,7 +60,5 @@
 				</div>
 			</form>
 		<!-- Fin del Formulario -->
-		</div>
-		<!-- /Contenido Principal-->
 
         {% endblock %}

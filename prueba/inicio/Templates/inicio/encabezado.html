@@ -6,6 +6,10 @@
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
 <title>{% block titulo%}{% endblock %}</title>
 
+
+
+
+
  {% load static %} 
 <link href="{% static 'inicio/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
 <link href="{% static 'inicio/css/londinium-theme.css' %}" rel="stylesheet" type="text/css">
@@ -59,6 +63,16 @@
 		<!-- Barra de menú -->
 		<div class="sidebar">
 			<div class="sidebar-content">
+
+				<div class="user-menu dropdown">
+					<a href=#>
+						<img src="{% block imagen%}{% endblock%}">
+						<div class="user-info">
+							{% block sub %} {% endblock%} <span>DSM</span>
+						</div>
+					</a>
+				</div>
+
 				<!-- Menú de navegación -->
 				<ul class="navigation">
 							<li><a href="{% url 'Principal'%}">Principal</a></li>
@@ -69,10 +83,46 @@
 			</div>
 		</div>
 		<!-- /sidebar -->
+
+		<!-- /imagen de usuario -->
+
+		<!-- /imagen de usuario -->
+		
 	</div>
+	<!-- Contenido Principal-->
+	 
+	<div class="page-content">
+
+
+
+
+		
+	
+	
+<!--Encabezdo -->
+<div class="page-header">
+	<div class="page-title">
+		<h3>{% block h3%}{% endblock%}
+		<small>{% block small %}{% endblock%}</small></h3>
+	</div>
+</div>
+<div class="breadcrumb-line">
+	<ul class="breadcrumb">
+		<a href="{% url 'Principal'%}">
+		{% if request.path == '/' %}
+			Principal
+		 {% else %}
+			 Principal{{request.path}}
+		 {% endif %}
+		</a>
+	</ul>
+</div>
+<!-- /Encabezado-->
     {% block contenido %}
 
-
     {% endblock %}
+
+<!-- /Contenido Principal-->
 </body>
 </html>
+
