@@ -1,0 +1,49 @@
+{% extends "inicio/encabezado.html" %}
+
+{% block titulo %} PRINCIPAL {% endblock %}
+
+{% block imagen%}
+
+{% load static%}
+{% static 'inicio/images/home.png' %}
+
+{% endblock%}
+
+{% block contenido %}
+
+<div class="page-header">
+	<div class="page-title">
+		<h3>Consultar Comentarios
+		<small>UTM</small></h3>
+	</div>
+
+	
+	
+</div>
+
+			<table class="table table-bordered table-striped">
+				<thead>
+					<tr>
+						<th>Usuario</th>
+						<th>Mensaje</th>
+						<th> </th>
+						<th> </th>
+					</tr>
+				</thead>
+			  <tbody>
+				{% for comentario in comentario %}
+				<tr>
+					<td class="muted">{{comentario.alumno}}</td>
+					<td class="muted">{{comentario.coment}}</td>
+					<td class="muted">Editar</td>
+					<td class="muted">Eliminar</td>
+				</tr>
+				<a href="{%url 'Eliminar' comentario.id%}">Eliminar</a>
+				{% endfor%}
+			 </tbody>
+			</table><br>
+
+
+{% endblock %}
+
+

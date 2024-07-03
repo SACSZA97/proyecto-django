@@ -1,0 +1,18 @@
+    {% extends "inicio/encabezado.html" %}
+
+    {% block titulo %} PRINCIPAL {% endblock %}
+    
+    {% block imagen%}
+    
+    {% load static%}
+    {% static 'inicio/images/home.png' %}
+    
+    {% endblock%}
+    
+    {% block contenido %}
+    
+        <td class="text-center">
+             <a href="{%url 'Eliminar' comentario.id%}">Eliminar</a>
+        </td>
+    
+    {% endblock %}
