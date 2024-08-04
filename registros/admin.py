@@ -14,6 +14,16 @@ class AdministrarModelo(admin.ModelAdmin):
     list_display_links=('matricula','nombre')
     list_editable=('turnno',)
 
+    def get_readonly_fields(self, request, obj=None):
+    #si el usuario pertenece al grupo de permisos "Usuario"
+        if request.user.groups.filter(name="Usuarios").exists():
+    #Bloquea los campos
+            return ('matricula','carrera', 'turno')
+    #Cualquier otro usuario que no pertenece al grupo "Usuario"
+        else:
+    #Bloquea los campos
+            return ('created', 'updated')
+
 admin.site.register(Alumnos, AdministrarModelo)
 
 class AdministrarComentarios(admin.ModelAdmin):
